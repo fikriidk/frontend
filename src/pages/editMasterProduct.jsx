@@ -49,7 +49,7 @@ export default function EditMasterProduct(props) {
         }
 
         const response = await Axios.get(
-          `https://backend.ptwpi.co.id/api/categories/${id}`
+          `https://backend.ptwpi.com/api/categories/${id}`
         );
 
         console.log("API response:", response);
@@ -86,7 +86,7 @@ export default function EditMasterProduct(props) {
       }
 
       const response = await Axios.post(
-        `https://backend.ptwpi.co.id/api/categories/${id}?_method=PUT`,
+        `https://backend.ptwpi.com/api/categories/${id}?_method=PUT`,
         formDataToSend,
         {
           headers: {

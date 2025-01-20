@@ -38,7 +38,7 @@ export default function AddMasterProvince() {
       };
 
       const response = await Axios.post(
-        "https://backend.ptwpi.co.id/api/provinces",
+        "https://backend.ptwpi.com/api/provinces",
         formData,
         {
           headers: {

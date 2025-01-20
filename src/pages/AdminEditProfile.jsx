@@ -31,7 +31,7 @@ export default function AdminEditProfile() {
     // Fetch user data when component mounts
     const fetchUserData = async () => {
       try {
-        const res = await axios.get('https://backend.ptwpi.co.id/api/user', {
+        const res = await axios.get('https://backend.ptwpi.com/api/user', {
           headers: {
             Authorization: `Bearer ${Cookies.get('authToken')}`,
           },
@@ -61,7 +61,7 @@ export default function AdminEditProfile() {
 
     // Make the API call to update the password
     try {
-      const response = await axios.put(`https://backend.ptwpi.co.id/api/users/${data.id}`, 
+      const response = await axios.put(`https://backend.ptwpi.com/api/users/${data.id}`, 
       {
         password: newPassword,
       },

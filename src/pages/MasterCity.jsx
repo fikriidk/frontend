@@ -25,7 +25,7 @@ const MasterCity = () => {
 
   const onProvinsi = async () => {
     try {
-      const response = await axios.get(`https://backend.ptwpi.co.id/api/provinces`);
+      const response = await axios.get(`https://backend.ptwpi.com/api/provinces`);
       setProvinsi(response.data);  // Make sure to set 'provinsi' with the data property
     
     } catch (error) {
@@ -41,7 +41,7 @@ const MasterCity = () => {
         throw new Error('Access token not found in cookies');
       }
   
-      await axios.delete(`https://backend.ptwpi.co.id/api/cities/${id}`, {
+      await axios.delete(`https://backend.ptwpi.com/api/cities/${id}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const MasterCity = () => {
 
   const fetchData = async (page) => {
     try {
-      const response = await axios.get(`https://backend.ptwpi.co.id/api/cities?page=${page}`);
+      const response = await axios.get(`https://backend.ptwpi.com/api/cities?page=${page}`);
       setPaginationData(response.data);
     } catch (error) {
       console.log(error);

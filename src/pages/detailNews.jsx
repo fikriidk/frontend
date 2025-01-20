@@ -20,7 +20,7 @@ export default function DetailNews() {
     const fetchBlogData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/blogs/" + id
+          "https://backend.ptwpi.com/api/blogs/" + id
         );
         setBlogData(response.data.blog);
       } catch (error) {

@@ -17,7 +17,7 @@ export default function EditAbout() {
     const [formData, setFormData] = useState({})
     const fetchData = async () => {
         try {
-            const res = await axios.get('https://backend.ptwpi.co.id/api/about/1')
+            const res = await axios.get('https://backend.ptwpi.com/api/about/1')
             setResult(res.data.data)
         } catch (error) {
             console.error(error.message)
@@ -34,7 +34,7 @@ export default function EditAbout() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.put('https://backend.ptwpi.co.id/api/about/1', formData, {
+            const res = await axios.put('https://backend.ptwpi.com/api/about/1', formData, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('authToken')}`
                 }

@@ -14,7 +14,7 @@ export default function DashboardPage() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('https://backend.ptwpi.co.id/api/dashboard', {
+      const res = await axios.get('https://backend.ptwpi.com/api/dashboard', {
         headers: {
           'Authorization': `Bearer ${Cookies.get('authToken')}`
         }
@@ -28,7 +28,7 @@ export default function DashboardPage() {
 
   const fetchResult = async () => {
     try {
-      const res = await axios.get('https://backend.ptwpi.co.id/api/barchart', {
+      const res = await axios.get('https://backend.ptwpi.com/api/barchart', {
         headers: {
           'Authorization': `Bearer ${Cookies.get('authToken')}`
         }

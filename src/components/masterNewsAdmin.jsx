@@ -40,7 +40,7 @@ export default function MasterNewsAdmin({
     if (confirmDelete) {
       try {
         // Make a DELETE request using Axios
-        await axios.delete(`https://backend.ptwpi.co.id/api/blogs/${id}`, {
+        await axios.delete(`https://backend.ptwpi.com/api/blogs/${id}`, {
           headers: {
             Authorization: `Bearer ${Cookies.get("authToken")}`,
           },

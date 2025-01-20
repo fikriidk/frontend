@@ -24,7 +24,7 @@ export default function MasterFooter() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get('https://backend.ptwpi.co.id/api/about/1')
+      const res = await axios.get('https://backend.ptwpi.com/api/about/1')
       setAbout(res.data.data)
     } catch (error) {
       console.error(error.message)

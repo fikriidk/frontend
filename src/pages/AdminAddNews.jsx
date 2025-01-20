@@ -74,7 +74,7 @@ export default function AdminAddNews() {
     console.log("Data yang dikirim ke server:", formDataToSend);
   
     try {
-      await axios.post(`https://backend.ptwpi.co.id/api/blogs`, formDataToSend, {
+      await axios.post(`https://backend.ptwpi.com/api/blogs`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${Cookies.get("authToken")}`,

@@ -31,7 +31,7 @@ export default function Supplier() {
     const fetchSupplierData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/supplier",
+          "https://backend.ptwpi.com/api/supplier",
           {
             headers: {
               Authorization: `Bearer ${authToken}`, // Include the token in the request headers
@@ -81,7 +81,7 @@ export default function Supplier() {
           throw new Error("Access token not found in cookies");
         }
         // Make a DELETE request using Axios
-        await axios.delete(`https://backend.ptwpi.co.id/api/supplier/${id}`, {
+        await axios.delete(`https://backend.ptwpi.com/api/supplier/${id}`, {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },

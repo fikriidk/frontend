@@ -22,7 +22,7 @@ export default function AdminProduct() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/products",
+          "https://backend.ptwpi.com/api/products",
           {
            
           }
@@ -70,7 +70,7 @@ export default function AdminProduct() {
   const handlePageChange = async (pageNumber) => {
     try {
       const response = await axios.get(
-        `https://backend.ptwpi.co.id/api/products?page=${pageNumber}`,
+        `https://backend.ptwpi.com/api/products?page=${pageNumber}`,
         {}
       );
 
@@ -92,7 +92,7 @@ export default function AdminProduct() {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `https://backend.ptwpi.co.id/api/products?search=${searchInput}`,
+        `https://backend.ptwpi.com/api/products?search=${searchInput}`,
         {
           headers: {
             Authorization: `Bearer ${Cookies.get("authToken")}`,

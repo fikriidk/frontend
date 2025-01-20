@@ -1,3 +1,9 @@
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import {
   Button,
@@ -40,7 +46,7 @@ export default function AddMasterCity() {
       };
 
       const response = await Axios.post(
-        "https://backend.ptwpi.co.id/api/cities/create",
+        "https://backend.ptwpi.com/api/cities/create",
         formData,
         {
           headers: {
@@ -60,7 +66,7 @@ export default function AddMasterCity() {
   };
 
   const getProvince = async () => {
-    const res = await Axios.get("https://backend.ptwpi.co.id/api/provinces")
+    const res = await Axios.get("https://backend.ptwpi.com/api/provinces")
     setProvinces(res.data)
   }
 

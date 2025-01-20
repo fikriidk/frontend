@@ -7,7 +7,7 @@ export default function MasterNotifEmail() {
 
   const handleSubmit = async () => {
     try {
-      const res = await axios.post('https://backend.ptwpi.co.id/api/customer/send', email)
+      const res = await axios.post('https://backend.ptwpi.com/api/customer/send', email)
     } catch (error) {
       console.error(error.message)
     }

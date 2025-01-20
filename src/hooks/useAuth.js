@@ -34,7 +34,7 @@ export const AuthProvider = ({ children }) => {
   const fetchUser = async () => {
     if (token && !user) {
       try {
-        const response = await fetch("https://backend.ptwpi.co.id/api/user", {
+        const response = await fetch("https://backend.ptwpi.com/api/user", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

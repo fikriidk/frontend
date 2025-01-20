@@ -28,7 +28,7 @@ export default function ProductPage() {
 
   const fetchCategory = async () => {
     try {
-      const res = await axios.get("https://backend.ptwpi.co.id/api/categories");
+      const res = await axios.get("https://backend.ptwpi.com/api/categories");
       setCategory(res.data);
     } catch (error) {
       console.error(error.message);
@@ -45,7 +45,7 @@ export default function ProductPage() {
 
   const fetchData = async (filters, page = currentPage) => {
     try {
-      let url = "https://backend.ptwpi.co.id/api/products";
+      let url = "https://backend.ptwpi.com/api/products";
       const params = new URLSearchParams();
 
       // Check if filters is an object and has properties
@@ -138,7 +138,7 @@ export default function ProductPage() {
     };
     try {
       const res = await axios.post(
-        "https://backend.ptwpi.co.id/api/customer/send",
+        "https://backend.ptwpi.com/api/customer/send",
         data
       );
     } catch (error) {

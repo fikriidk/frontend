@@ -32,7 +32,7 @@ export default function NewsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://backend.ptwpi.co.id/api/blogs");
+        const response = await fetch("https://backend.ptwpi.com/api/blogs");
         const data = await response.json();
         setBlogData(data.blogs.data);
         setFilteredProducts(data.blogs.data);
@@ -47,7 +47,7 @@ export default function NewsPage() {
   const handlePageChange = async (pageNumber) => {
     try {
       const response = await axios.get(
-        `https://backend.ptwpi.co.id/api/blogs?page=${pageNumber}`,
+        `https://backend.ptwpi.com/api/blogs?page=${pageNumber}`,
         {}
       );
   

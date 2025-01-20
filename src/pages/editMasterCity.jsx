@@ -28,7 +28,7 @@ export default function EditMasterCity() {
         }
 
         const response = await axios.get(
-          `https://backend.ptwpi.co.id/api/cities/${id}`,
+          `https://backend.ptwpi.com/api/cities/${id}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export default function EditMasterCity() {
       };
   
       const response = await axios.put(
-        `https://backend.ptwpi.co.id/api/cities/${id}`,
+        `https://backend.ptwpi.com/api/cities/${id}`,
         formData,
         {
           headers: {

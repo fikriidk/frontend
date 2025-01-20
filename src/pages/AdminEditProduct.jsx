@@ -50,7 +50,7 @@ export default function AdminEditProduct() {
 
   useEffect(() => {
     // Fetch data from the API using Axios
-    Axios.get("https://backend.ptwpi.co.id/api/provinces", {
+    Axios.get("https://backend.ptwpi.com/api/provinces", {
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
@@ -77,7 +77,7 @@ export default function AdminEditProduct() {
     const fetchCategories = async () => {
       try {
         const response = await Axios.get(
-          "https://backend.ptwpi.co.id/api/categories"
+          "https://backend.ptwpi.com/api/categories"
         );
 
         setCategories(response.data);
@@ -93,7 +93,7 @@ export default function AdminEditProduct() {
     const fetchProductData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/products/" + id
+          "https://backend.ptwpi.com/api/products/" + id
         );
         setProductData(response.data.data);
         setFormData({
@@ -158,7 +158,7 @@ export default function AdminEditProduct() {
     const fetchCities = async (pageNumber = 1) => {
       try {
         const response = await Axios.get(
-          `https://backend.ptwpi.co.id/api/cities?province_id=${selectedProvince}&page=${pageNumber}`
+          `https://backend.ptwpi.com/api/cities?province_id=${selectedProvince}&page=${pageNumber}`
         );
 
         const cityPageData = response.data;
@@ -245,7 +245,7 @@ export default function AdminEditProduct() {
 
   
       const response = await Axios.post(
-        `https://backend.ptwpi.co.id/api/products/${id}?_method=PUT`,
+        `https://backend.ptwpi.com/api/products/${id}?_method=PUT`,
         formDataObject,
         {
           headers: {

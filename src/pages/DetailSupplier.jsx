@@ -18,7 +18,7 @@ export default function DetailSupplier() {
     const fetchSupplierData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/supplier/" + id,
+          "https://backend.ptwpi.com/api/supplier/" + id,
           {
             headers: {
               Authorization: `Bearer ${authToken}`, // Include the token in the request headers

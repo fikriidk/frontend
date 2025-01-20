@@ -45,7 +45,7 @@
       if (confirmDelete) {
         try {
           // Make a DELETE request using Axios
-          await axios.delete(`https://backend.ptwpi.co.id/api/products/${id}`, {
+          await axios.delete(`https://backend.ptwpi.com/api/products/${id}`, {
             headers: {
               Authorization: `Bearer ${Cookies.get("authToken")}`,
             },

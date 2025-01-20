@@ -21,7 +21,7 @@ export default function LoginPage() {
       // Perform any client-side validation if needed
 
       // Perform the login API request
-      const response = await fetch("https://backend.ptwpi.co.id/api/login", {
+      const response = await fetch("https://backend.ptwpi.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

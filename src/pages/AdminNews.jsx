@@ -17,7 +17,7 @@ export default function AdminNews() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://backend.ptwpi.co.id/api/blogs");
+        const response = await fetch("https://backend.ptwpi.com/api/blogs");
         const data = await response.json();
         setBlogData(data.blogs.data);
       } catch (error) {

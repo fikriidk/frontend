@@ -29,7 +29,7 @@ export default function MasterProvince() {
 
   useEffect(() => {
     // Fetch data from the API using Axios
-    Axios.get("https://backend.ptwpi.co.id/api/provinces", {
+    Axios.get("https://backend.ptwpi.com/api/provinces", {
       headers: {
         "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export default function MasterProvince() {
       }
   
       // Perform delete operation using Axios
-      Axios.delete(`https://backend.ptwpi.co.id/api/provinces/${id}`, {
+      Axios.delete(`https://backend.ptwpi.com/api/provinces/${id}`, {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",

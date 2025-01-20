@@ -19,7 +19,7 @@ export default function AdminDetailProduct() {
     const fetchProductData = async () => {
       try {
         const response = await axios.get(
-          "https://backend.ptwpi.co.id/api/products/" + id
+          "https://backend.ptwpi.com/api/products/" + id
         );
         setProductData(response.data.data);
       } catch (error) {

@@ -16,7 +16,7 @@ export default function MasterProduct() {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get("https://backend.ptwpi.co.id/api/categories");
+      const response = await axios.get("https://backend.ptwpi.com/api/categories");
       setCategories(response.data);
       setCounter(1); // Reset counter to 1 when fetching new categories
     } catch (error) {
@@ -36,7 +36,7 @@ export default function MasterProduct() {
         throw new Error('Access token not found in cookies');
       }
 
-      await axios.delete(`https://backend.ptwpi.co.id/api/categories/${id}`, {
+      await axios.delete(`https://backend.ptwpi.com/api/categories/${id}`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',

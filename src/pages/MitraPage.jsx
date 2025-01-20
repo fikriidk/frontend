@@ -70,7 +70,7 @@ export default function MitraPage() {
   const fetchProvince = async () => {
     try {
       const { data } = await axios.get(
-        "https://backend.ptwpi.co.id/api/provinces"
+        "https://backend.ptwpi.com/api/provinces"
       );
       setProvinceData(data);
     } catch (error) {
@@ -81,7 +81,7 @@ export default function MitraPage() {
   const fetchCity = async () => {
     try {
       const { data } = await axios.get(
-        `https://backend.ptwpi.co.id/api/cities/province/${province}`
+        `https://backend.ptwpi.com/api/cities/province/${province}`
       );
       setCityData(data);
       setCity(data.length > 0 ? data[0].id : "");
@@ -93,7 +93,7 @@ export default function MitraPage() {
   const fetchCategory = async () => {
     try {
       const { data } = await axios.get(
-        "https://backend.ptwpi.co.id/api/categories"
+        "https://backend.ptwpi.com/api/categories"
       );
       setCategoryData(data);
     } catch (error) {
@@ -175,7 +175,7 @@ export default function MitraPage() {
     // Mengirim formDataToSend ke server menggunakan axios
     try {
       const response = await axios.post(
-        "https://backend.ptwpi.co.id/api/supplier/create",
+        "https://backend.ptwpi.com/api/supplier/create",
         formDataToSend,
         {
           headers: {
@@ -294,7 +294,7 @@ export default function MitraPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://pli.co.id/wp-content/uploads/2017/09/pli-logo-1.png"
+                  src="https://pli.com/wp-content/uploads/2017/09/pli-logo-1.png"
                   alt=""
                   className="h-[150px] md:h-[70px] xl:h-[100px] mx-auto object-cover"
                 />
@@ -308,7 +308,7 @@ export default function MitraPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://widodomakmurperkasa.co.id/storage/app/media/wmp-logo.png"
+                  src="https://widodomakmurperkasa.com/storage/app/media/wmp-logo.png"
                   alt=""
                   className="h-[150px] md:h-[70px] xl:h-[100px] mx-auto object-cover"
                 />

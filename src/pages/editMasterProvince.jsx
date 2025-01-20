@@ -39,7 +39,7 @@ export default function EditMasterProvince() {
         }
 
         const response = await Axios.get(
-          `https://backend.ptwpi.co.id/api/provinces/${id}`,
+          `https://backend.ptwpi.com/api/provinces/${id}`,
           {
             headers: {
               "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export default function EditMasterProvince() {
       };
 
       const response = await Axios.put(
-        `https://backend.ptwpi.co.id/api/provinces/${id}`,
+        `https://backend.ptwpi.com/api/provinces/${id}`,
         formData,
         {
           headers: {

@@ -37,7 +37,7 @@ export default function MasterFilterCard({ onFilter }) {
     const fetchProvinsi = async () => {
       setIsLoadingProvinsi(true);
       try {
-        const response = await fetch('https://backend.ptwpi.co.id/api/provinces');
+        const response = await fetch('https://backend.ptwpi.com/api/provinces');
         if (!response.ok) throw new Error('Failed to fetch provinces');
         const data = await response.json();
         setProvinsiData(data);
@@ -61,7 +61,7 @@ export default function MasterFilterCard({ onFilter }) {
     const fetchKota = async () => {
       setIsLoadingKota(true);
       try {
-        const response = await fetch(`https://backend.ptwpi.co.id/api/cities/province/${provinsi}`);
+        const response = await fetch(`https://backend.ptwpi.com/api/cities/province/${provinsi}`);
         if (!response.ok) throw new Error('Failed to fetch cities');
         const data = await response.json();
         setKotaData(data);
@@ -80,7 +80,7 @@ export default function MasterFilterCard({ onFilter }) {
     const fetchCategories = async () => {
       setIsLoadingCategories(true);
       try {
-        const response = await fetch('https://backend.ptwpi.co.id/api/categories');
+        const response = await fetch('https://backend.ptwpi.com/api/categories');
         if (!response.ok) throw new Error('Failed to fetch categories');
         const data = await response.json();
         setCategories(data); // Assuming the API returns an array of category objects

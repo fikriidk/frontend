@@ -43,7 +43,7 @@ export default function AboutPage() {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get("https://backend.ptwpi.co.id/api/about/1");
+      const res = await axios.get("https://backend.ptwpi.com/api/about/1");
       setResult(res.data.data);
     } catch (error) {
       console.error(error.message);
@@ -84,7 +84,7 @@ export default function AboutPage() {
     };
     try {
       const res = await axios.post(
-        "https://backend.ptwpi.co.id/api/customer/send",
+        "https://backend.ptwpi.com/api/customer/send",
         data
       );
     } catch (error) {

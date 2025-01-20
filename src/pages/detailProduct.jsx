@@ -46,7 +46,7 @@ export default function DetailProduct() {
   const fetchData = async () => {
     try {
       const res = await axios.get(
-        "https://backend.ptwpi.co.id/api/products/" + id
+        "https://backend.ptwpi.com/api/products/" + id
       );
       setProduct(res.data.data);
       setPrice(res.data.data.price);
@@ -127,7 +127,7 @@ export default function DetailProduct() {
     };
     try {
       const res = await axios.post(
-        "https://backend.ptwpi.co.id/api/notifications",
+        "https://backend.ptwpi.com/api/notifications",
         data
       );
     } catch (error) {

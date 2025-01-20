@@ -42,7 +42,7 @@ export default function Home() {
     };
     try {
       const res = axios.post(
-        "https://backend.ptwpi.co.id/api/customer/send",
+        "https://backend.ptwpi.com/api/customer/send",
         data
       );
     } catch (error) {

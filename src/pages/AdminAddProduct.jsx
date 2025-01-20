@@ -149,7 +149,7 @@ export default function AdminAddProduct() {
 
       // Axios POST request with FormData
       const response = await Axios.post(
-        "https://backend.ptwpi.co.id/api/products",
+        "https://backend.ptwpi.com/api/products",
         formDataToSend,
         {
           headers: {
@@ -201,10 +201,10 @@ export default function AdminAddProduct() {
       }
 
       const categoriesResponse = Axios.get(
-        "https://backend.ptwpi.co.id/api/categories"
+        "https://backend.ptwpi.com/api/categories"
       );
       const provincesResponse = Axios.get(
-        "https://backend.ptwpi.co.id/api/provinces"
+        "https://backend.ptwpi.com/api/provinces"
       );
 
       const [categoriesData, provincesData] = await Promise.all([
@@ -241,7 +241,7 @@ export default function AdminAddProduct() {
         if (selectedProvince !== "") {
           console.log("Selected Province ID:", selectedProvince);
           const response = await Axios.get(
-            `https://backend.ptwpi.co.id/api/cities/province/${selectedProvince}`
+            `https://backend.ptwpi.com/api/cities/province/${selectedProvince}`
           );
 
           const filteredCities = response.data.map((item) => ({
